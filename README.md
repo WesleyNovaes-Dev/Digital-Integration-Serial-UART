@@ -1,88 +1,144 @@
-# 🚀 **Gateway IoT: Modernização de Balanças para Indústria 4.0**
+# 🚀 Gateway IoT Industrial – Integração de Balanças RS-232/USB com Redes TCP/IP  
+### **Projeto Empresarial – Indústria 4.0 (NCH Brasil)**  
+**Desenvolvido por:** *Wesley Davi Zanon Novaes*  
 
-[![GitHub License](https://img.shields.io/github/license/seu-usuario/seu-repositorio?style=flat-square&color=blue)](https://github.com/seu-usuario/seu-repositorio/blob/main/LICENSE)
-![Status](https://img.shields.io/badge/Status-Produção-success?style=flat-square)
-![Hardware](https://img.shields.io/badge/Hardware-ESP32-critical?style=flat-square&logo=espressif)
-![Backend](https://img.shields.io/badge/Backend-Node.js-success?style=flat-square&logo=nodedotjs)
-
-> **Desenvolvedor:** Wesley Davi Zanon Novaes
-
----
-
-## 🎯 **Visão Geral da Solução**
-
-Este projeto é uma solução de **IoT Industrial (IIoT)** madura e em produção, projetada para integrar balanças industriais legadas (com interfaces RS-232/USB) diretamente à infraestrutura de rede corporativa e aos sistemas de gestão (ERP).
-
-Nascido de um trabalho acadêmico e evoluído para uma aplicação empresarial robusta, este **Gateway IoT** elimina a necessidade de apontamentos manuais de peso, automatizando a coleta de dados no chão de fábrica e viabilizando a digitalização de processos críticos de pesagem.
-
-✅ **Aplicação Real:** O sistema está implantado e integrado com sucesso ao ERP da **NCH Brasil**, demonstrando sua eficácia e confiabilidade em um ambiente industrial exigente.
+![Badge ESP32](https://img.shields.io/badge/Hardware-ESP32-red)
+![Badge NodeJS](https://img.shields.io/badge/Backend-Node.js-green)
+![Badge Protocol](https://img.shields.io/badge/Protocol-TCP%2FIP-blue)
+![Badge Industry](https://img.shields.io/badge/Indústria-4.0-orange)
 
 ---
 
-## ✨ **Diferenciais Competitivos e Funcionalidades**
+## 🌐 Visão Geral
 
-* **Modernização sem Substituição:** Conecta equipamentos legados à Indústria 4.0 sem o alto custo de aquisição de novas balanças com conectividade nativa.
-* **Conectividade Corporativa Robusta:** Suporte total a redes Wi-Fi empresariais, incluindo autenticação **WPA2-Enterprise**, essencial para ambientes corporativos seguros.
-* **Configuração Simplificada:** Interface Web embarcada (modo Access Point) para comissionamento e configuração rápida dos parâmetros de rede e operação, sem necessidade de cabos ou softwares adicionais.
-* **Eficiência de Dados:** Algoritmo proprietário *LineChangeDetector* que filtra leituras redundantes, reduzindo o tráfego de rede em até **90%** e otimizando o armazenamento de dados.
-* **Alta Disponibilidade:** Mecanismos automáticos de reconexão e tratamento de falhas de rede, garantindo a continuidade da operação e a integridade dos dados coletados.
-* **Integração Flexível:** Transmissão de dados via TCP/IP em formatos padronizados, permitindo fácil integração com diversos backends, middlewares e ERPs de mercado.
+Este repositório apresenta um **Gateway IoT Industrial** projetado para **modernizar balanças legadas** (RS-232 e USB) e conectá-las diretamente a redes corporativas para uso em sistemas ERP, MES, supervisórios e aplicações de automação industrial.
 
----
+Diferente de um TCC acadêmico, este projeto é **uma evolução real** implantada e utilizada na **NCH Brasil**, rodando diariamente em ambiente de produção — com integração já validada com o ERP atual da empresa.
 
-## 🛠️ **Arquitetura da Solução**
+O objetivo central é simples e poderoso:
 
-A solução é composta por um hardware robusto e de baixo custo, validado em ambiente industrial.
+### **Transformar qualquer balança serial em um dispositivo inteligente totalmente integrado à Indústria 4.0.**
 
-
-
-
-| Componente | Função na Solução |
-| :--- | :--- |
-| **ESP32 (Gateway)** | Núcleo de processamento, inteligência na borda (edge computing) e conectividade Wi-Fi segura. |
-| **Interface Serial Industrial** | Módulo conversor (ex: MAX3232) para comunicação confiável com a interface RS-232 da balança. |
-| **Fonte de Alimentação Industrial** | Fonte de alimentação estável e adequada para o ambiente de chão de fábrica. |
-| **Conectividade Física** | Conector DB9 padrão para interface direta com a balança. |
+Sem alterar o hardware da balança.  
+Sem custos abusivos de modernização.  
+Sem soluções proprietárias fechadas.
 
 ---
 
-## ⚙️ **Implantação e Operação**
+## 🎯 Principais Benefícios
 
-A implantação do Gateway IoT é projetada para ser rápida e minimamente intrusiva.
-
-1.  **Instalação Física:** O hardware do gateway é conectado à porta serial da balança e à alimentação elétrica.
-2.  **Configuração de Rede:** Um técnico se conecta à rede Wi-Fi de configuração do gateway e, através de uma interface web amigável, insere as credenciais da rede corporativa (SSID, senha/usuário) e define o modo de IP (DHCP ou Fixo).
-3.  **Integração de Backend:** O sistema de backend (ex: Node.js) é configurado para receber os dados transmitidos pelo gateway na porta e IP definidos, processá-los e inseri-los no banco de dados do ERP.
-4.  **Operação Automática:** Uma vez configurado, o gateway opera de forma autônoma, capturando, filtrando e transmitindo os dados de pesagem sempre que houver uma nova leitura válida.
-
----
-
-## 📊 **Resultados de Negócio**
-
-A implantação desta solução na NCH Brasil gerou resultados tangíveis:
-
-* **Automação do Processo:** Eliminação de 100% dos apontamentos manuais de peso nas estações integradas.
-* **Redução de Erros:** Mitigação de erros humanos de digitação, aumentando a confiabilidade dos dados de estoque e produção.
-* **Dados em Tempo Real:** Disponibilização imediata dos dados de pesagem no ERP para planejamento e controle da produção.
-* **ROI Acelerado:** O custo da solução é uma fração do valor de balanças novas com conectividade equivalente, proporcionando um retorno sobre o investimento extremamente rápido.
+✔ **Elimina apontamentos manuais** de pesagem  
+✔ **Reduz erros operacionais**  
+✔ **Transmite dados em tempo real** via TCP/IP  
+✔ **Suporte a Wi-Fi corporativo, incluindo WPA2-Enterprise (802.1X)**  
+✔ **Interface Web moderna** para configuração completa do dispositivo  
+✔ **Compatível com ERPs, bancos de dados, supervisórios e APIs**  
+✔ **Plug-and-Play** (conecta → configura → integra)
 
 ---
 
-## 🌐 **Contato e Mais Informações**
+## 🧩 Arquitetura Geral
 
-Para detalhes técnicos, demonstrações ou informações sobre como implementar esta solução em sua empresa, entre em contato.
+A solução é composta por dois pilares principais:
 
-👉 **[Link para o Site/Portfólio do Desenvolvedor](SEU_LINK_AQUI)** 👈
+### **1) Gateway IoT (ESP32)**
+Responsável por:
+- Receber dados via **RS-232 (UART + MAX3232)** ou USB
+- Limpar, validar e tratar frames recebidos
+- Detectar mudanças de peso (filtro inteligente)
+- Transmitir dados via:
+  - **TCP (porta configurável)**
+  - **Servidor de Log**
+- Servir uma **interface web avançada responsiva**
+- Oferecer:
+  - Configuração Wi-Fi
+  - Configuração Ethernet (quando disponível)
+  - IP estático/DHCP
+  - Hostname
+  - Baud Rate
+  - Formato JSON / Texto puro
+  - Múltiplos clientes simultâneos
 
-Este projeto é um exemplo prático de como a tecnologia IoT pode gerar valor real e imediato para a indústria.
+### **2) Backend Integrado (Node.js)**
+- Recebe e processa dados enviados pelo gateway
+- Permite integração com:
+  - ERPs
+  - Sistemas legados
+  - Bancos de dados
+  - Dashboards e BI
+- Registro de eventos e logs
 
 ---
 
-**Apoio:**
-NCH Brasil. Av. Darcí Carvalho Dafferner, 200 - Boa Vista, Sorocaba - SP, 18085-850.
+## 🛠️ Hardware Utilizado
+
+| Componente | Função |
+|-----------|--------|
+| **ESP32 DevKitC V4** | Core de processamento e Wi-Fi |
+| **MAX3232** | Conversão RS-232 → TTL |
+| **DB9** | Interface com balanças industriais |
+| **Fonte 5V** | Alimentação |
+| **Protótipo final** | Pronto para migração a PCB industrial |
 
 ---
 
-**Desenvolvido por Wesley Davi Zanon Novaes.**
+## 🔌 Conexões (Pinout)
+
+| ESP32 | MAX3232 | Função |
+|------|---------|--------|
+| GPIO 16 (RX2) | TX | Recepção RS-232 |
+| GPIO 17 (TX2) | RX | Envio RS-232 |
+| GND | GND | Referência |
+| 3.3V | VCC | Alimentação |
 
 ---
+
+## 🧠 Funcionamento do Firmware
+
+1. **Inicialização**  
+   - Carrega credenciais
+   - Tenta reconectar à última rede
+   - Caso falhe → inicia **Modo AP de Configuração**
+
+2. **Leitura da Balança (RS-232)**  
+   - Captura bytes brutos
+   - Limpa caracteres inválidos
+   - Normaliza a string de peso
+   - Filtra repetições para reduzir tráfego
+
+3. **Transmissão dos Dados**  
+   - Via Socket TCP (porta configurável)
+   - Suporte a múltiplos clientes
+   - Mecanismos:
+     - Retry
+     - Reconexão automática
+     - Heartbeat de latência
+
+4. **Webserver Interno**  
+   - Configuração completa da rede
+   - Exibição de status em tempo real
+   - Dashboard de balance connection
+   - Opções avançadas:
+     - IP estático
+     - WINS
+     - DNS configurável
+     - SoftAP customizável
+
+---
+
+## 📡 Integração com ERP (CONFIRMADA)
+
+Este projeto já está homologado com o **ERP utilizado pela NCH Brasil**.
+
+Isso inclui:
+- Recebimento automático das pesagens
+- Inserção de dados em rotinas internas
+- Substituição de processos manuais
+- Automação completa do fluxo de entrada de dados
+
+---
+
+## 📸 Screenshots (Inserir após subir as imagens)
+
+> **Coloque as imagens no repositório e substitua pelos links:**  
+
