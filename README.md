@@ -36,8 +36,6 @@ A solução é composta por um hardware robusto e de baixo custo, validado em am
 
 
 
-[Image of Industrial IoT Gateway Architecture Diagram]
-
 
 | Componente | Função na Solução |
 | :--- | :--- |
